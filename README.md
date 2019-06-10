@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dapperstats/bbplot/master/LICENSE)
 
-<img src="man/figures/bbplot.png" width="200px">
+<img src="man/figures/bbplot.png" width="200px" align="right">
 
 bbplot extends base R plotting for bbs.
 
