@@ -23,6 +23,8 @@ blank(x = 1, y = 1, type = "n", xlab = "", ylab = "",
 \item{yaxt}{Set to \code{"n"}. See \code{\link[graphics]{plot}}.}
 
 \item{bty}{Set to \code{"n"}. See \code{\link[graphics]{plot}}.}
+
+\item{...}{Additional arguments sent to \code{\link[graphics]{plot}}.}
 }
 \description{
 A simple wrapper on \code{\link[graphics]{plot}} with all

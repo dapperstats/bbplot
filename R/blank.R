@@ -24,6 +24,8 @@
 #'
 #' @param bty Set to \code{"n"}. See \code{\link[graphics]{plot}}.
 #'
+#' @param ... Additional arguments sent to \code{\link[graphics]{plot}}.
+#'
 #' @examples
 #' \dontrun{
 #'   blank()   
