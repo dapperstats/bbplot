@@ -42,4 +42,4 @@ devtools::install_github("dapperstats/bbplot")
 
 **J. L. Simonis** is presently the sole author of `bbplot`. 
 
-If you are interested in contibuting, see the Contributor Guidelines. (Forthcoming)
+If you are interested in contibuting, see the [Contributor Guidelines](Forthcominghttps://github.com/dapperstats/bbplot/blob/master/CONTRIBUTING.md).
