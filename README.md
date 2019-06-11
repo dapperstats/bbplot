@@ -3,7 +3,9 @@
 # bbplot 0.0.1
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dapperstats/bbplot/master/LICENSE)
+[![Build Status](https://api.travis-ci.org/dapperstats/bbplot.svg?branch=master)](https://travis-ci.org/dapperstats/bbplot)
 [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Codecov test coverage](https://img.shields.io/codecov/c/github/dapperstats/bbplot/master.svg)](https://codecov.io/github/dapperstats/bbplot/branch/master)
 
 `bbplot` extends base R plotting for bbs.
 
