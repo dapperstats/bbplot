@@ -1,12 +1,9 @@
 Package: bbplot
-Title: Extending base R ploting for bbs
+Title: Extending base R ploting for bbs.
 Version: 0.0.1
 Authors@R: c(
   person(c("Juniper", "L."), "Simonis", email = "dapperstats@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9798-0460")))
-Description: Create a directory, populate it with data, build 
-  models, forecast rodent populations, and visualize the results.
-  This package provides the functionality underlying the
-  Portal Predictions Project: <>.
+Description: Providing additional flexibility and power to R graphics via the base R plotting functionality provided by the graphics and grDevices packages loaded by default with R. The functions are designed to specifically mimic the base plotting functions in the R API (e.g., have the same variable inputs named the same and in the same order) as well as in function-level syntax. It follows the painters model of R graphics, where output production occurs in steps that are placed with subsequent steps being layered on top of earlier steps. Extension of the classical painter model to allow for removal of earlier steps is forthcoming not yet implemented.
 URL: https://github.com/dapperstats/bbplot
 BugReports: https://github.com/dapperstats/bbplot/issues
 Depends: R (>= 3.2.3)
