@@ -7,7 +7,7 @@
 [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Codecov test coverage](https://img.shields.io/codecov/c/github/dapperstats/bbplot/master.svg)](https://codecov.io/github/dapperstats/bbplot/branch/master)
 
-`bbplot` extends base R plotting for bbs.
+`bbplot` extends base R plotting for [bbs](https://www.computerhope.com/jargon/b/bb.htm) (an endearing shorthand for "baby" as in "ty bb").
 
 It is a set of functions written to provide additional flexibility and power
 to R graphics written using the base R plotting functionality provided by
