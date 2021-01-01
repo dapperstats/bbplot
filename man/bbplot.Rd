@@ -3,9 +3,5 @@
 \docType{package}
 \name{bbplot}
 \alias{bbplot}
-\alias{bbplot-package}
 \title{Extending base plotting for bbs}
-\description{
-Extending base plotting for bbs
-}
 \keyword{package}

@@ -4,8 +4,17 @@
 \alias{blank}
 \title{Create a plot with a blank space as the default}
 \usage{
-blank(x = 1, y = 1, type = "n", xlab = "", ylab = "",
-  xaxt = "n", yaxt = "n", bty = "n", ...)
+blank(
+  x = 1,
+  y = 1,
+  type = "n",
+  xlab = "",
+  ylab = "",
+  xaxt = "n",
+  yaxt = "n",
+  bty = "n",
+  ...
+)
 }
 \arguments{
 \item{x}{Set to \code{1}. See \code{\link[graphics]{plot}}.}

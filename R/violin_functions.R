@@ -1,7 +1,7 @@
-# graphics functions for drawing a variety of violins
-# still in development but pretty and flexible right now
-# also will get pulled over into bbplot 
-
+#' @title Draw violins
+#'
+#' @description Draw violins on plots
+#'
 #' @param x The vector of values or function to be summarized
 #' @param location The graphical location with respect to the axes where
 #'   the violin is to be placed. Default assumption is for the x-axis, but
@@ -17,8 +17,10 @@
 # also now have values explicitly
 # rotate T/F, wrt the plotting axes
 # side top bottom both
-
-
+#'
+#' @export
+#'
+#' 
 violin <- function(x, location = NULL, rotate = TRUE,
                    type = NULL, wex = 1, values = NULL, nvalues = NULL, 
                    side = "both", ...){
