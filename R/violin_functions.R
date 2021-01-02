@@ -2,7 +2,7 @@
 #'
 #' @description Draw violins on plots
 #'
-#' @param x The vector of values or function to be summarized
+#' @param x The vector of values to be summarized
 #' @param location The graphical location with respect to the axes where
 #'   the violin is to be placed. Default assumption is for the x-axis, but
 #'   can be a named-by-axis vector.
@@ -14,6 +14,7 @@
 #'   evalution to the plotting axis value. now wex for width expansion
 #' @param nvalues Integer number of values to use for the drawing of the 
 #'   violin. If NULL, set by vtype. 
+#' @param probs which probabilities to draw horizontal bars across
 # also now have values explicitly
 # rotate T/F, wrt the plotting axes
 # side top bottom both
@@ -23,13 +24,30 @@
 #' 
 violin <- function(x, location = NULL, rotate = TRUE,
                    type = NULL, wex = 1, values = NULL, nvalues = NULL, 
-                   side = "both", ...){
+                   side = "both", probs = c(0.025, 0.25, 0.5, 0.75, 0.975),
+                   ...){
 
   vlocation <- violin_location(location, rotate)
   vtype <- if_null(type, default_violin_type(x))
   dvals <- dist_values(x, values, nvalues, vtype)
   vvals <- violin_values(dvals, vlocation, rotate, vtype, wex, side)
   draw_violin(vvals, vtype, ...)
+  draw_probs(x, dvals, vvals, probs)
+}
+
+draw_probs <- function(x, dvals, vvals, probs){
+  nprobs <- length(probs)
+  if(nprobs == 0){
+    return()
+  }
+  CDF <- ecdf(x)(dvals$x)
+  for(i in 1:nprobs){
+    first_match <- which(CDF >= probs[i])[1]
+    mirror_match <- NROW(vvals) - first_match + 1
+    points(c(vvals[first_match, "x"], vvals[mirror_match, "x"]),
+           c(vvals[first_match, "y"], vvals[mirror_match, "y"]),
+           type = "l", lwd = 1)
+  }
 }
 
 draw_violin <- function(values, type = NULL, ...){

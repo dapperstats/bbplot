@@ -13,11 +13,12 @@ violin(
   values = NULL,
   nvalues = NULL,
   side = "both",
+  probs = c(0.025, 0.25, 0.5, 0.75, 0.975),
   ...
 )
 }
 \arguments{
-\item{x}{The vector of values or function to be summarized}
+\item{x}{The vector of values to be summarized}
 
 \item{location}{The graphical location with respect to the axes where
 the violin is to be placed. Default assumption is for the x-axis, but
@@ -33,6 +34,8 @@ evalution to the plotting axis value. now wex for width expansion}
 
 \item{nvalues}{Integer number of values to use for the drawing of the 
 violin. If NULL, set by vtype.}
+
+\item{probs}{which probabilities to draw horizontal bars across}
 }
 \description{
 Draw violins on plots
