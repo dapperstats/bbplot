@@ -1,5 +1,13 @@
 
 
+if_null <- function(x = NULL, val_if_null = NULL){
+  if (is.null(x)){
+    val_if_null
+  } else {
+    x
+  }
+}
+
 mass <- function(x, min = NULL, max = NULL){
   if (!all(x %% 1 == 0)){
     stop("x must be integer conformable")

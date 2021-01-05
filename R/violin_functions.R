@@ -1,6 +1,10 @@
 #' @title Draw violins
 #'
 #' @description Draw violins on plots
+#'  \cr
+#'  determines the values of the variable to evaluate (x_values) and the 
+#' resulting evaluation values (y_values) of the distribution. these are 
+#' the raw values
 #'
 #' @param x The vector of values to be summarized
 #' @param location The graphical location with respect to the axes where
@@ -14,14 +18,34 @@
 #'   evalution to the plotting axis value. now wex for width expansion
 #' @param nvalues Integer number of values to use for the drawing of the 
 #'   violin. If NULL, set by vtype. 
-#' @param probs which probabilities to draw horizontal bars across
+#' @param probs which probabilities to draw horizontal bars across. 
+#' @param rotate Logical about if to rotate axes, default is TRUE. 
+#' @param values desired values to evaluate x. 
+#' @param ... Additional arguments to pass to polygon or rect.
 # also now have values explicitly
 # rotate T/F, wrt the plotting axes
-# side top bottom both
+# side top bottom both. 
+#' @param side "both" puts the dist on both sides of the violin. 
+#' @param violin_values x and y violin values. 
+#' @param dist_values x and y distribution values. 
+#' @param xvals x values
+#' @param minn,maxn,nrf min and max for n and the n reduction factor 
+#' 
+#'
+#' @return 
+#'  violin_location: data.frame of x and y to locate the violin
+#'  dist_values: data.frame of x and y to from the distribution
+#'  violin_values: data.frame of x and y to plot
+#'
+#' @name violin
+#' 
+#' 
+NULL
+
+#' @rdname violin
 #'
 #' @export
 #'
-#' 
 violin <- function(x, location = NULL, rotate = TRUE,
                    type = NULL, wex = 1, values = NULL, nvalues = NULL, 
                    side = "both", probs = c(0.025, 0.25, 0.5, 0.75, 0.975),
@@ -35,21 +59,31 @@ violin <- function(x, location = NULL, rotate = TRUE,
   draw_probs(x, dvals, vvals, probs)
 }
 
-draw_probs <- function(x, dvals, vvals, probs){
+#' @rdname violin
+#'
+#' @export
+#'
+draw_probs <- function(x, dist_values, violin_values, probs){
   nprobs <- length(probs)
   if(nprobs == 0){
     return()
   }
-  CDF <- ecdf(x)(dvals$x)
+  CDF <- ecdf(x)(dist_values$x)
   for(i in 1:nprobs){
     first_match <- which(CDF >= probs[i])[1]
-    mirror_match <- NROW(vvals) - first_match + 1
-    points(c(vvals[first_match, "x"], vvals[mirror_match, "x"]),
-           c(vvals[first_match, "y"], vvals[mirror_match, "y"]),
+    mirror_match <- NROW(violin_values) - first_match + 1
+    points(c(violin_values[first_match, "x"],
+             violin_values[mirror_match, "x"]),
+           c(violin_values[first_match, "y"],
+             violin_values[mirror_match, "y"]),
            type = "l", lwd = 1)
   }
 }
 
+#' @rdname violin
+#'
+#' @export
+#'
 draw_violin <- function(values, type = NULL, ...){
   if (type == "l"){
     polygon(values, ...)
@@ -68,6 +102,10 @@ draw_violin <- function(values, type = NULL, ...){
   }
 }
 
+#' @rdname violin
+#'
+#' @export
+#'
 violin_values <- function(dist_values, location = NULL, rotate = TRUE, 
                           type = "l", wex = 1, side = "both"){
 
@@ -83,6 +121,10 @@ violin_values <- function(dist_values, location = NULL, rotate = TRUE,
   data.frame(x = x_vals, y = y_vals)
 }
 
+#' @rdname violin
+#'
+#' @export
+#'
 violin_length_values <- function(dist_values, type = "l", side = "both"){
   nvalues <- nrow(dist_values)
   values <- dist_values[ , "x"]
@@ -100,6 +142,10 @@ violin_length_values <- function(dist_values, type = "l", side = "both"){
   }
 }
 
+#' @rdname violin
+#'
+#' @export
+#'
 violin_width_values <- function(dist_values, type = "l", wex = 1, 
                                 side = "both"){
   nvalues <- nrow(dist_values)
@@ -118,14 +164,12 @@ violin_width_values <- function(dist_values, type = "l", wex = 1,
   }
 }
 
-#' determines the values of the variable to evaluate (x_values) and the 
-#' resulting evaluation values (y_values) of the distribution. these are 
-#' the raw values
-#'
-#' @return data.frame of x and y  
+
+#' 
+#' @rdname violin
 #'
 #' @export
-#' 
+#'
 dist_values <- function(x, values = NULL, nvalues = NULL, type = "l"){
 
   if (is.null(values)) {
@@ -141,12 +185,20 @@ dist_values <- function(x, values = NULL, nvalues = NULL, type = "l"){
 }
 
 
+#' @rdname violin
+#'
+#' @export
+#'
 dist_x_values <- function(x, nvalues){
   minx <- min(x, na.rm = TRUE)
   maxx <- max(x, na.rm = TRUE)
   seq(minx, maxx, length.out = nvalues)
 }
 
+#' @rdname violin
+#'
+#' @export
+#'
 dist_y_values <- function(x, xvals){
   if (all(x %% 1 == 0) & all(xvals %% 1 == 0)){
     yvals <- mass(x)$y
@@ -182,18 +234,14 @@ dist_y_values <- function(x, xvals){
   yvals
 }
 
-if_null <- function(x = NULL, val_if_null = NULL){
-  if (is.null(x)){
-    val_if_null
-  } else {
-    x
-  }
-}
 
 
 
-#' nrf n reduction factor
 
+#' @rdname violin
+#'
+#' @export
+#'
 default_nvalues <- function(x, type = "l", nrf = NULL, minn = NULL, 
                             maxn = NULL){
   if (type == "n"){
@@ -221,7 +269,10 @@ default_nvalues <- function(x, type = "l", nrf = NULL, minn = NULL,
 
 
 
-
+#' @rdname violin
+#'
+#' @export
+#'
 default_violin_type <- function(x = NULL){
   type <- "l"
   if (!is.numeric(x)){
@@ -233,7 +284,10 @@ default_violin_type <- function(x = NULL){
   type
 }
 
-
+#' @rdname violin
+#'
+#' @export
+#'
 violin_location <- function(location = NULL, rotate = TRUE){
   if(is.null(location)){
     out <- c(x = 0, y = 0)

@@ -2,6 +2,17 @@
 % Please edit documentation in R/violin_functions.R
 \name{violin}
 \alias{violin}
+\alias{draw_probs}
+\alias{draw_violin}
+\alias{violin_values}
+\alias{violin_length_values}
+\alias{violin_width_values}
+\alias{dist_values}
+\alias{dist_x_values}
+\alias{dist_y_values}
+\alias{default_nvalues}
+\alias{default_violin_type}
+\alias{violin_location}
 \title{Draw violins}
 \usage{
 violin(
@@ -16,6 +27,35 @@ violin(
   probs = c(0.025, 0.25, 0.5, 0.75, 0.975),
   ...
 )
+
+draw_probs(x, dist_values, violin_values, probs)
+
+draw_violin(values, type = NULL, ...)
+
+violin_values(
+  dist_values,
+  location = NULL,
+  rotate = TRUE,
+  type = "l",
+  wex = 1,
+  side = "both"
+)
+
+violin_length_values(dist_values, type = "l", side = "both")
+
+violin_width_values(dist_values, type = "l", wex = 1, side = "both")
+
+dist_values(x, values = NULL, nvalues = NULL, type = "l")
+
+dist_x_values(x, nvalues)
+
+dist_y_values(x, xvals)
+
+default_nvalues(x, type = "l", nrf = NULL, minn = NULL, maxn = NULL)
+
+default_violin_type(x = NULL)
+
+violin_location(location = NULL, rotate = TRUE)
 }
 \arguments{
 \item{x}{The vector of values to be summarized}
@@ -23,6 +63,8 @@ violin(
 \item{location}{The graphical location with respect to the axes where
 the violin is to be placed. Default assumption is for the x-axis, but
 can be a named-by-axis vector.}
+
+\item{rotate}{Logical about if to rotate axes, default is TRUE.}
 
 \item{type}{Character indicating the type of plotting. Defaults to NULL
 which defines itself then based on the support for x to 
@@ -32,11 +74,34 @@ non-continuous/integer-conformable}
 \item{wex}{Numeric height scale that transforms the distribution
 evalution to the plotting axis value. now wex for width expansion}
 
+\item{values}{desired values to evaluate x.}
+
 \item{nvalues}{Integer number of values to use for the drawing of the 
 violin. If NULL, set by vtype.}
 
-\item{probs}{which probabilities to draw horizontal bars across}
+\item{side}{"both" puts the dist on both sides of the violin.}
+
+\item{probs}{which probabilities to draw horizontal bars across.}
+
+\item{...}{Additional arguments to pass to polygon or rect.}
+
+\item{dist_values}{x and y distribution values.}
+
+\item{violin_values}{x and y violin values.}
+
+\item{xvals}{x values}
+
+\item{minn, maxn, nrf}{min and max for n and the n reduction factor}
+}
+\value{
+violin_location: data.frame of x and y to locate the violin
+ dist_values: data.frame of x and y to from the distribution
+ violin_values: data.frame of x and y to plot
 }
 \description{
 Draw violins on plots
+ \cr
+ determines the values of the variable to evaluate (x_values) and the 
+resulting evaluation values (y_values) of the distribution. these are 
+the raw values
 }
