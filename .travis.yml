@@ -8,12 +8,8 @@ addons:
     packages:
       - libgsl0-dbg
       - libgsl0-dev
-      - libgsl2
     update: true
 
-before_install:
-  - sudo apt-get update -qq
-  - sudo apt-get install texlive-latex-base
 
 r_packages:
   - covr
