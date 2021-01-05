@@ -6,9 +6,9 @@ warnings_are_errors: false
 addons:
   apt:
     packages:
-      - libgsl2-dbg
-      - libgsl2-dev
-      - libgsl2dbl
+      - libgsl0-dbg
+      - libgsl0-dev
+      - libgsl2
     update: true
 
 before_install:
