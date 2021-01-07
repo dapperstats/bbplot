@@ -17,26 +17,26 @@ blank(
 )
 }
 \arguments{
-\item{x}{Set to \code{1}. See \code{\link[graphics]{plot}}.}
+\item{x}{Set to \code{1}. See \code{\link[base]{plot}}.}
 
-\item{y}{Set to \code{1}. See \code{\link[graphics]{plot}}.}
+\item{y}{Set to \code{1}. See \code{\link[base]{plot}}.}
 
-\item{type}{Set to \code{"n"}. See \code{\link[graphics]{plot}}.}
+\item{type}{Set to \code{"n"}. See \code{\link[base]{plot}}.}
 
-\item{xlab}{Set to \code{""}. See \code{\link[graphics]{plot}}.}
+\item{xlab}{Set to \code{""}. See \code{\link[base]{plot}}.}
 
-\item{ylab}{Set to \code{""}. See \code{\link[graphics]{plot}}.}
+\item{ylab}{Set to \code{""}. See \code{\link[base]{plot}}.}
 
-\item{xaxt}{Set to \code{"n"}. See \code{\link[graphics]{plot}}.}
+\item{xaxt}{Set to \code{"n"}. See \code{\link[base]{plot}}.}
 
-\item{yaxt}{Set to \code{"n"}. See \code{\link[graphics]{plot}}.}
+\item{yaxt}{Set to \code{"n"}. See \code{\link[base]{plot}}.}
 
-\item{bty}{Set to \code{"n"}. See \code{\link[graphics]{plot}}.}
+\item{bty}{Set to \code{"n"}. See \code{\link[base]{plot}}.}
 
-\item{...}{Additional arguments sent to \code{\link[graphics]{plot}}.}
+\item{...}{Additional arguments sent to \code{\link[base]{plot}}.}
 }
 \description{
-A simple wrapper on \code{\link[graphics]{plot}} with all
+A simple wrapper on \code{\link[base]{plot}} with all
   default values set to create a blank plot space. \cr \cr
   Specifically, \code{x = 1}, \code{y = 1}, \code{type = "n"}, 
   \code{xlab = ""}, \code{ylab = ""}, \code{xaxt = "n"}, \code{yaxt = "n"}, 
