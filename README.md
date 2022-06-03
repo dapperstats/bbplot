@@ -32,7 +32,7 @@ devtools::install_github("dapperstats/bbplot")
 
 ## Author Contributions
 
-**J. L. Simonis** is the main author of `bbplot`. 
+**J. L. Simonis** is the main author of `bbplot`.  
 **M. Fidino** is a recent addition to the team.
 
 If you are interested in contributing, see the [Contributor Guidelines](https://github.com/dapperstats/bbplot/blob/master/CONTRIBUTING.md).
