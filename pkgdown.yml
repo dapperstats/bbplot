@@ -1,5 +1,9 @@
-pandoc: '2.2'
-pkgdown: 1.3.0
-pkgdown_sha: ~
-articles: []
+pandoc: 2.7.3
+pkgdown: 2.0.3.9000
+pkgdown_sha: 855eba1ad3f486bbda9fcbe43ec8eb88066f161a
+articles: {}
+last_built: 2022-06-03T20:03Z
+urls:
+  reference: https://dapperstats.github.io/bbplot/reference
+  article: https://dapperstats.github.io/bbplot/articles
 
