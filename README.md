@@ -1,33 +1,25 @@
-<img src="man/figures/bbplot.png" width="200px" align="right">
+<img src="man/figures/bbplot.png" alt="hexagon software logo, white background with black outline and a black L shaped plot border and the text bbplot in computer code typeface" width="200px" align="right">
 
 # bbplot 0.0.1
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dapperstats/bbplot/master/LICENSE)
-[![Build Status](https://api.travis-ci.org/dapperstats/bbplot.svg?branch=master)](https://travis-ci.org/dapperstats/bbplot)
 [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Codecov test coverage](https://img.shields.io/codecov/c/github/dapperstats/bbplot/master.svg)](https://codecov.io/github/dapperstats/bbplot/branch/master)
 
-`bbplot` extends base R plotting for [bbs](https://www.computerhope.com/jargon/b/bb.htm) (an endearing shorthand for "baby" as in "ty bb").
+`bbplot` extends base R plotting for [bbs](https://www.computerhope.com/jargon/b/bb.htm) (an endearing shorthand for "baby" as in "ty bb" for "thank you, baby").
 
-It is a set of functions written to provide additional flexibility and power
-to R graphics written using the base R plotting functionality provided by
-the graphics and grDevices packages loaded by default with R.
+It is a set of functions written to provide additional flexibility and power to R graphics written using the base R plotting functionality provided by the `graphics` and `grDevices` packages loaded by default with R.
 
-The code is designed to specifically mimic the base plotting functions in 
-API (e.g., have the same variable inputs named the same and in the same order)
-as well as in function-level syntax. 
+The code is designed to specifically mimic the base plotting functions in API (e.g., have the same variable inputs named the same and in the same order) as well as in function-level syntax. 
 
-We follow the *painters model* of R graphics, where output production occurs in 
-steps that are placed with subsequent steps being layered on top of earlier 
-steps. We seek to extend the classical painter model to allow for removal 
-of earlier steps, although this is not yet implemented. 
+We follow the *painters model* of R graphics, where output production occurs in steps that are placed with subsequent steps being layered on top of earlier steps. 
+We seek to extend the classical painter model to allow for removal of earlier steps, although this is not yet implemented. 
 
-A formal written definition of the code and design asthetics is forthcoming.
+A formal written definition of the code and design aesthetics is forthcoming.
 
 ## Status: Experimental, Active Development
 
-The `bbplot` package is currently being actively developed, and is an early 
-stage of package construction from disparate function code.
+The `bbplot` package is currently being actively developed, and is an early stage of package construction from disparate function code.
 
 ## Installation
 
@@ -40,6 +32,7 @@ devtools::install_github("dapperstats/bbplot")
 
 ## Author Contributions
 
-**J. L. Simonis** is presently the sole author of `bbplot`. 
+**J. L. Simonis** is the main author of `bbplot`. 
+**M. Fidino** is a recent addition to the team.
 
-If you are interested in contibuting, see the [Contributor Guidelines](https://github.com/dapperstats/bbplot/blob/master/CONTRIBUTING.md).
+If you are interested in contributing, see the [Contributor Guidelines](https://github.com/dapperstats/bbplot/blob/master/CONTRIBUTING.md).
