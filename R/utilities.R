@@ -28,9 +28,3 @@ mass <- function(x, min = NULL, max = NULL){
   out
 }
 
-
-messageq <- function(txt = NULL, quiet = FALSE){
-  if (!quiet){
-    message(txt)
-  }
-}

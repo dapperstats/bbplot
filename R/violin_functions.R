@@ -1,8 +1,6 @@
-#' @title Draw violins
+#' @title Draw Violins
 #'
-#' @description Draw violins on plots
-#'  \cr
-#'  determines the values of the variable to evaluate (x_values) and the 
+#' @description Draw violins on plots. Determines the values of the variable to evaluate (x_values) and the 
 #' resulting evaluation values (y_values) of the distribution. these are 
 #' the raw values
 #'

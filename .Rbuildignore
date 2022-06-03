@@ -1,3 +1,4 @@
+^\.github$
 ^ancillary$
 ^\.travis\.yml$
 ^CONTRIBUTING\.md$

@@ -123,7 +123,7 @@ ribbon <- function(x, y, density=NULL, angle=45, border=NA,
       my_rgbs <- col2rgb(col)
       # set color
       my_col <- rgb(
-        my_rgbs[1],my_rgbs[2],my_rgbs[3],max = 255,alpha = 255 * alpha
+        my_rgbs[1],my_rgbs[2],my_rgbs[3],maxColorValue  = 255,alpha = 255 * alpha
       )
     } 
   }

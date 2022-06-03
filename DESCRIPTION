@@ -1,9 +1,10 @@
 Package: bbplot
-Title: Extending base R plotting for bbs
+Title: Extending Base R Plotting for bbs
 Version: 0.0.1
 Authors@R: c(
-  person(c("Juniper", "L."), "Simonis", email = "dapperstats@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9798-0460")))
-Description: Providing additional flexibility and power to R graphics via the base R plotting functionality provided by the graphics and grDevices packages loaded by default with R. The functions are designed to specifically mimic the base plotting functions in the R API (e.g., have the same variable inputs named the same and in the same order) as well as in function-level syntax. It follows the painters model of R graphics, where output production occurs in steps that are placed with subsequent steps being layered on top of earlier steps. Extension of the classical painter model to allow for removal of earlier steps is forthcoming not yet implemented.
+  person(c("Juniper", "L."), "Simonis", email = "dapperstats@gmail.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-9798-0460")),
+  person(c("Mason"), "Fidino", role = c("aut"), comment = c(ORCID = "0000-0002-8583-0307")))
+Description: Provides additional flexibility and power to R graphics via the base R plotting functionality provided by the graphics and grDevices packages loaded by default with R. The functions are designed to specifically mimic the base plotting functions in the R API (e.g., have the same variable inputs named the same and in the same order) as well as in function-level syntax. The package follows the painters model of R graphics, where output production occurs in steps that are placed with subsequent steps being layered on top of earlier steps. 
 URL: https://github.com/dapperstats/bbplot
 BugReports: https://github.com/dapperstats/bbplot/issues
 Depends: R (>= 3.2.3)
@@ -12,7 +13,6 @@ LazyData: true
 Imports:
   graphics,
   grDevices,
-  viridis
 Suggests:
   knitr,
   pkgdown,

@@ -6,6 +6,7 @@
 \usage{
 axis_text(
   text = NULL,
+  labels = FALSE,
   side = 3,
   line = 0,
   outer = FALSE,
@@ -20,6 +21,8 @@ axis_text(
 }
 \arguments{
 \item{text}{a character or expression vector specifying the text to be written. See \code{\link[graphics]{mtext}}.}
+
+\item{labels}{Set to \code{FALSE}. See \code{\link[graphics]{axis}}.}
 
 \item{side}{an integer specifying which side of the plot the axis is to be drawn on. The axis is placed as follows: 1=below, 2=left, 3=above and 4=right.}
 
@@ -40,8 +43,6 @@ axis_text(
 \item{font}{font for text. Can be a vector. \code{NA} values (the default) means use \code{par("font")}.}
 
 \item{...}{Other graphical parameters that may apply to \code{\link[graphics]{mtext}}.}
-
-\item{labels}{Set to \code{FALSE}. See \code{\link[graphics]{axis}}.}
 }
 \description{
 A wrapper function for \code{\link[graphics]{mtext}}

@@ -66,7 +66,7 @@ axis_blank(
 \item{minor}{Whether or not to add smaller tick marks spaced equally between the larger tickmarks specified by the at argument. Tick length is set to \code{tck * 0.5}.}
 }
 \description{
-A wrapper function for \code{\link[base]{axis}}
+A wrapper function for \code{\link[graphics]{axis}}
   with three changes.
    
   1. \code{labels = FALSE} is now the default.

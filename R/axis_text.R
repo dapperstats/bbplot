@@ -49,7 +49,7 @@
 #' }
 #'
 #' @export
-axis_text <- function(text = NULL, side = 3, line = 0, outer = FALSE, at = NULL,
+axis_text <- function(text = NULL, labels = FALSE, side = 3, line = 0, outer = FALSE, at = NULL,
                       adj = NA, padj = NA, cex = NA, col = NA, font = NA, ...){
   if(!is.numeric(side)){
     stop("side must be numeric. 1=below, 2=left, 3=above and 4=right.")

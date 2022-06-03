@@ -1,6 +1,6 @@
 #' @title Add an axis to a plot without labels as the default
 #'
-#' @description A wrapper function for \code{\link[base]{axis}}
+#' @description A wrapper function for \code{\link[graphics]{axis}}
 #'   with three changes.
 #'    
 #'   1. \code{labels = FALSE} is now the default.

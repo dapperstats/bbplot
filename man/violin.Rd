@@ -13,7 +13,7 @@
 \alias{default_nvalues}
 \alias{default_violin_type}
 \alias{violin_location}
-\title{Draw violins}
+\title{Draw Violins}
 \usage{
 violin(
   x,
@@ -99,9 +99,7 @@ violin_location: data.frame of x and y to locate the violin
  violin_values: data.frame of x and y to plot
 }
 \description{
-Draw violins on plots
- \cr
- determines the values of the variable to evaluate (x_values) and the 
+Draw violins on plots. Determines the values of the variable to evaluate (x_values) and the 
 resulting evaluation values (y_values) of the distribution. these are 
 the raw values
 }
