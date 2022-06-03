@@ -1,0 +1,22 @@
+url: https://dapperstats.github.io/bbplot
+development:
+  mode: auto
+navbar:
+  title: "bbplot"
+  structure:
+    left: [home, reference, news]
+    right: [twitter, github] 
+  components: 
+    reference: 
+      text: "Reference"
+      href: reference/index.html
+    news: 
+      text: "News"
+      href: news/index.html
+    twitter:
+      icon: fa-twitter
+      href: https://twitter.com/dapperstats
+    github:
+      icon: fa-github
+      href: https://github.com/dapperstats
+  
