@@ -2,6 +2,7 @@
 
 # bbplot 0.0.1
 
+[![R Build](https://github.com/dapperstats/bbplot/actions/workflows/r.yml/badge.svg)](https://github.com/dapperstats/bbplot/actions/workflows/r.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/dapperstats/bbplot/master/LICENSE)
 [![Lifecycle:maturing](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Codecov test coverage](https://img.shields.io/codecov/c/github/dapperstats/bbplot/master.svg)](https://codecov.io/github/dapperstats/bbplot/branch/master)
